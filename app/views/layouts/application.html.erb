@@ -7,8 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<a href="/pages/about">About</a>
+<a href="/pages/contact">Contact</a>
+  <%= yield %>
+<p>&copy; <%= link_to "vtt01uk", "http://www.github.com/vtt01uk", :target => "_blank" %> Copyright 2016</p>
 </body>
 </html>
