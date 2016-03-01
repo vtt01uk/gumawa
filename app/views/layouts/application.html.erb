@@ -13,7 +13,7 @@
       <!--send messages to users-->
       <!--https://github.com/plataformatec/devise/wiki/How-To:-Integrate-I18n-Flash-Messages-with-Devise-and-Bootstrap-->
       <% flash.each do |name, msg| %>
-          <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
+      <div class="alert alert-<%= name %>">
             <a href="#" data-dismiss="alert" class="close">x</a>
             <%= msg %>
           </div>
