@@ -9,4 +9,7 @@ class Listing < ActiveRecord::Base
   
   #validates images 
   validates_attachment_presence :image
+  
+  #association 
+  belongs_to :user
 end
