@@ -9,11 +9,21 @@
 <body>
    <%= render 'layouts/header' %>
     <div class="container">
-    <!--send messages to users-->
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+
+      <!--send messages to users-->
+      <!--https://github.com/plataformatec/devise/wiki/How-To:-Integrate-I18n-Flash-Messages-with-Devise-and-Bootstrap-->
+      <% flash.each do |name, msg| %>
+          <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">
+            <a href="#" data-dismiss="alert" class="close">x</a>
+            <%= msg %>
+          </div>
+        <% end %>
       <%= yield %>
       <%= render 'layouts/footer'%>
     </div>
 </body>
 </html>
+
+
+
+
