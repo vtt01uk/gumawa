@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Easy upload management for ActiveRecord
 gem 'paperclip', '~> 4.3.5'
+gem 'devise'
 
 
 # Use ActiveModel has_secure_password

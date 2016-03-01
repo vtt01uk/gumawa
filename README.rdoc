@@ -3,4 +3,4 @@
 An online marketplace for buying and selling trinkets and paraphernalia
 
 ---
-<tt>http://vtt01uk.github.io/gumawa/<tt>
+http://vtt01uk.github.io/gumawa/
