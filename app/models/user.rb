@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
   
   #association
   has_many :listing, dependent: :destroy
+  has_many :sales, class_name: "Order", foreign_key: "seller_id"
+  has_many :purchases, class_name: "Order", foreign_key: "buyer_id"
 end

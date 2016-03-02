@@ -12,4 +12,5 @@ class Listing < ActiveRecord::Base
   
   #association 
   belongs_to :user
+  has_many :orders
 end
