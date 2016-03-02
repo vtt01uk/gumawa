@@ -67,3 +67,14 @@ text-align: center;
     color: #468847;
     text-align: left;
  }
+
+.jumbotron {
+  background-image: url('handmade_banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1, h3 {
+      font-family: guardian-egyptt, georgia, serif;
+  font-weight: 400;
+//  color: #d5641c;
+  }
+}
