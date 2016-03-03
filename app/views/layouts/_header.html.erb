@@ -19,15 +19,26 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <% if !signed_in? %>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
+        <% if signed_in? %>
+        
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Seller Account <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "View Sales", sales_path %></li>
+            <li><%= link_to "Manage Listings", seller_path %></li>
+           </ul>
+          </li>       
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <%= current_user.name %><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "View Purchases", purchases_path %></li>
+                <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+               </ul>
+          </li>
         <% else %>
-        <li><%= link_to "View Sales", sales_path %></li>
-        <li><%= link_to "View Purchases", purchases_path %></li>
-        <li><%= link_to "Manage Listings", seller_path %></li>
-          <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+            <li><%= link_to "Sign in", new_user_session_path %></li>    
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
