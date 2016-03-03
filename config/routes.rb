@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   
-  #Include listings number in the URL for the order pages
+  #Include listings id number in the URL for the order pages
   resources :listings do
       resources :orders
   end
@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get 'pages/contact'
   #Add sellers URL to listings/
   get 'seller' => 'listings#seller'
+  get 'sales' => 'orders#sales'
+  get 'purchases' => 'orders#purchases'
   
   root 'listings#index'
   

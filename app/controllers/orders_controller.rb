@@ -4,6 +4,15 @@ class OrdersController < ApplicationController
 
   # GET /orders
   # GET /orders.json
+  
+  def sales
+    @orders = Order.all.where(seller: current_user).order("created_at DESC")
+  end  
+  
+  def purchases
+    @orders = Order.all.where(buyer: current_user).order("created_at DESC")
+  end
+  
   def index
     @orders = Order.all
   end
@@ -30,7 +39,7 @@ class OrdersController < ApplicationController
     @listing = Listing.find(params[:listing_id])
     @seller = @listing.user
     
-#    @order.listing_id = @listing.id
+    @order.listing_id = @listing.id
     @order.buyer_id = current_user.id
     @order.seller_id = @seller.id
 

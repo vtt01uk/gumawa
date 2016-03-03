@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20160302171732) do
     t.datetime "updated_at", null: false
     t.integer  "buyer_id"
     t.integer  "seller_id"
+    t.integer  "listing_id"
   end
 
   create_table "users", force: :cascade do |t|
