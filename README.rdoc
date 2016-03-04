@@ -1,6 +1,6 @@
 == Gumawa
 
-An online marketplace for buying and selling trinkets and paraphernalia
+An online marketplace for buying and selling hand-crafted goods, trinkets and other paraphernalia.
 
 ---
 http://vtt01uk.github.io/gumawa/
